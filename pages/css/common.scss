@@ -1,7 +1,7 @@
 .mainContainer {
     padding: 57px 0 0 0;
     
-    @media (min-width: 768px) {
+    @media (min-width: 780px) {
         padding: 0;
     }
 }
@@ -10,7 +10,7 @@
     max-width: 1024px;
     margin: auto;
 
-    @media (min-width: 768px) {
+    @media (min-width: 780px) {
         margin: 0 auto 50px auto;
     }
 }

@@ -11,10 +11,15 @@
         background-position: center;
         border-radius: 4px;
         margin: 0 16px 0 0;
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
 
-        @media (min-width: 768px) {
+        @media (min-width: 360px) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @media (min-width: 780px) {
             width: 180px;
             height: 180px;
         }
@@ -22,12 +27,23 @@
 
     .content {
         flex: 1;
-        padding: 18px 0 0 0;
+        
+        @media (min-width: 360px) {
+            padding: 10px 0 0 0;
+        }
+
+        @media (min-width: 780px) {
+            padding: 18px 0 0 0;
+        }
 
         .price {
             font-size: 24px;
             color: #333;
-            margin: 0 0 18px 0;
+            margin: 0 0 8px 0;
+            
+            @media (min-width: 360px) {
+                margin: 0 0 18px 0;
+            }
 
             & > img {
                 width: 18px;
@@ -47,7 +63,7 @@
         color: #666;
         padding: 5px 0 0 0;
         
-        @media (min-width: 768px) {
+        @media (min-width: 780px) {
             width: 170px;
             font-size: 12px;
             padding: 32px 0 0 0;
