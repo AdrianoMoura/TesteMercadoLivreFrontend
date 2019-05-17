@@ -1,0 +1,34 @@
+.container {
+    display: none;
+    padding: 16px 0;
+    font-size: 14px;
+    color: #999;
+    
+    @media (min-width: 768px) {
+        display: flex;
+    }
+
+    .item {
+        color: #999;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        .separator {
+            display: inline-block;
+            margin: 0 8px;
+            transform: scale(.7, 1.5);
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        &:last-child {
+            font-weight: 600;
+            .separator {
+                display: none;
+            }
+        }
+    }
+}

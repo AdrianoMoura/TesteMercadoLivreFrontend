@@ -79,6 +79,7 @@ const makeItem = (item, full = false) => {
             decimals: parseInt((item.price - parseInt(item.price)) * 100)
         },
         picture: item.thumbnail,
+        city: item.address && item.address.city_name,
         condition: item.condition,
         free_shipping: item.shipping.free_shipping,
     }
@@ -86,6 +87,7 @@ const makeItem = (item, full = false) => {
     if (full) {
         return Object.assign({}, product, {
             sold_quantity: item.sold_quantity,
+            picture: item.pictures[0].url,
             description: item.text || item.plain_text
         })
     }

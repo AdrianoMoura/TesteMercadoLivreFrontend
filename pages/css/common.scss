@@ -1,0 +1,25 @@
+.mainContainer {
+    padding: 57px 0 0 0;
+    
+    @media (min-width: 768px) {
+        padding: 0;
+    }
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: auto;
+
+    @media (min-width: 768px) {
+        margin: 0 auto 50px auto;
+    }
+}
+
+.buyButton {
+    background-color: #3483FA;
+    padding: 10px;
+    text-align: center;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+}
