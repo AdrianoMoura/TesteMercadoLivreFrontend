@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import css from './styles.scss'
 import Link from 'next/link'
+import formatNumber from '../../utils/formatNumber'
 
 class ProductCard extends Component {
 
@@ -21,7 +22,7 @@ class ProductCard extends Component {
                     <div className={css.picture} style={{ backgroundImage: `url(${picture.replace(/-I.jpg/g, '-O.jpg')})` }} />
                     <div className={css.content}>
                         <div className={css.price}>
-                            $ {price.amount.toLocaleString()}
+                            $ {formatNumber(price.amount)}
                             {
                                 free_shipping && <img src='/static/ic_shipping@2x.png.png' />
                             }

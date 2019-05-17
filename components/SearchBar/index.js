@@ -3,16 +3,11 @@ import Router from 'next/router'
 import css from './styles.scss'
 
 class SearchBar extends Component {
-
-    state = {
-        q: null
-    }
-
     constructor(props) {
         super(props)
 
         this.state = {
-            q: props.value
+            q: props.value || ''
         }
     }
 

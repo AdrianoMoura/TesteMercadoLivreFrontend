@@ -4,6 +4,7 @@ import Breadcrumb from '../components/Breadcrumb'
 import common from './css/common.scss'
 import css from './css/productDetail.scss'
 import axios from 'axios'
+import formatNumber from '../utils/formatNumber'
 
 class ProductDetail extends Component {
 
@@ -49,7 +50,7 @@ class ProductDetail extends Component {
                                     {title}
                                 </h1>
                                 <h2>
-                                    $ {price.amount.toLocaleString()}<span>{price.decimals.toString().padStart(2, '0')}</span>
+                                    $ {formatNumber(price.amount)}<span>{price.decimals.toString().padStart(2, '0')}</span>
                                     {
                                         free_shipping && <img src='/static/ic_shipping@2x.png.png' />
                                     }
@@ -61,8 +62,8 @@ class ProductDetail extends Component {
                             <h2>Descrição do Produto</h2>
                             <p>
                                 {
-                                    description.split('\n').map(desc =>
-                                        <span>
+                                    description.split('\n').map((desc, index) =>
+                                        <span key={index}>
                                             {desc}
                                             <br />
                                         </span>
